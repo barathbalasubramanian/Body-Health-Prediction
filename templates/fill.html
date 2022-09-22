@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/fill.css')}}">
+</head>
+<style>
+    body {
+        background-image: url({{url_for('static', filename='img/fill.webp')}});
+    }
+</style>
+<body>
+    <div id="container">
+        <div>
+            <h1>DATA COLLECTION</h1>
+        </div>
+        <div>
+            <form method='post' action="/last" name="home_page">
+                <label>NAME</label></br>
+                <input type="text" id="inputs" name='name' required></br>
+                <div id="gender">
+                    <label>GENDER</label>
+                    <input type="radio" name="gender" value="yes">MALE<input type="radio" name="gender" value="no" required>FEMALE</br>
+                </div><br>
+                <label>YOUR AGE</label></br>
+                <input type="age"  id="inputs" name='age' min="18" max="90" required></br>
+                <label>YOUR WEIGHT</label></br>
+                <input type="number" min="10" max="100"  id="inputs" name="weight" required></br>
+                <label>YOUR HEIGHT</label></br>
+                <input type="number" min="100" max="350" id="inputs" name="height" required></br>
+                <label>BLOOD GLUCOSE LEVEL</label></br>
+                <input type="number" name="quantity" min="50" max="400" id="inputs" required></br>
+                <!-- <div id="sugar_d">
+                    <label>SUGAR PATIENT</label>
+                    <input type="radio" name="sugar" value="yes">YES<input type="radio" name="sugar" value="no" required>NO</br>
+                </div><br>
+                <div id="heart_d">
+                    <label>HEART PATIENT</label>
+                    <input type="radio" name="heart" value="yes">YES<input type="radio" name="heart" value="no" required>NO</br>
+                </div><br> -->
+                <label >CHESTPAIN TYPE</label>
+                <div id="ChestPainType">
+                    <input type="radio" name="ChestPainType" >ATA<input type="radio" name="ChestPainType">ASY<input type="radio" name="ChestPainType" >NAP<input type="radio" name="ChestPainType" >NA</br>
+                </div><br>
+                <label >BLOOD PRESSURE</label>
+                <input type="number" name="pressure" min="0" max="130" id="inputs"></br>
+                <label >CHOLESTEROL LEVEL</label>
+                <input type="number" name="cholesterol" min="0" max="650" id="inputs"></br>
+                <label >EXERCISEANGINA</label>
+                <div id="exercise_div">
+                    <input type="radio" name="exercise" value="yes">YES<input type="radio" name="exercise" value="no" required>NO</br>
+                </div><br>
+                <div id="smoke_div">
+                    <label >SMOKING STATUS</label><br>
+                    <div id="one"><input type="radio" name="smoke" value="yes" >UNKNOWN<input type="radio" name="smoke" value="no"  required>NEVER SMOKE</div>
+                    <div id="two"><input type="radio" name="smoke" value="yes" >SMOKES<input type="radio" name="smoke" value="no" required>FORMALLY SMOKE</div></br>
+                </div>
+                <div id="buttons">
+                    <button id="home"><a href="/index" method="GET">GO TO HOME</a></button>
+                    <button type='submit' id="login">SUBMIT</button></br>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

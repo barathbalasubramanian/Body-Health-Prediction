@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/register.css')}}">
+</head>
+<style>
+    body {
+        background-image: url({{url_for('static', filename='img/reg.webp')}});
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="title">
+            <h1>REGISTER</h1>
+        </div>
+        <div id="register">
+            <form method='post' action="/register_validation" name="register_form">
+                <label id="labels">NAME</label></br>
+                <input type="text" name="username" required></br>
+                <label id="labels">EMAIL</label></br>
+                <input type="email" name="email" id="email_box" required></br>
+                <label id="labels">PASSWORD</label></br>
+                <input type="password" name="f_pass" id="f_pass" required></br>
+                <label id="labels">CONFRIM PASSWORD</label></br>
+                <input type="password" name="c_pass" id="c_pass" required></br>
+                <button type='submit'>REGISTER</button></br>
+            </form>
+        </div>
+    <div>
+        {% if error %}  
+            <center id="error" ><p><strong>Error</strong>: {{error}}</p></center>
+        {% endif %} 
+    </div>
+    </div>
+</body>
+</html>
+

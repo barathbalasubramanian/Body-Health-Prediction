@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELLNESS AND FITNESS</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/index.css')}}">
+
+    <style>
+        body {
+            background-image: url({{url_for('static', filename='img/medbck.webp')}});
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="title">
+            <h1>WELLNESS AND FITNESS</h1>
+        </div>
+        <div id="form">
+            <form method='post' action="/login_validation" name="index_form">
+                <div>
+                    <div>
+                        <label id="labels">USERNAME</label></br>
+                        <input type="text" name='username' required></br>
+                    </div>
+                    <div>
+                        <label id="labels">EMAIL</label></br>
+                        <input type="email" name="email" required></br>
+                    </div>
+                    <div>
+                        <label id="labels">PASSWORD</label></br>
+                        <input type="password" name='pass' required></br>
+                    </div>
+                    <div id="buttons">
+                        <button type='submit' id="submit" name="submit" >LOGIN</button></br>
+                        <button type='submit'><a href="/register">REGISTER</a></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div>
+            {% if error %}  
+                <center id="error"><p><strong>Error</strong>: {{error}}</p></center>
+            {% endif %} 
+        </div>
+    </div>
+</body>
+</html>

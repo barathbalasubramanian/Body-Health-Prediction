@@ -1,0 +1,38 @@
+
+* {
+    margin: 0;
+    padding :0;
+}
+/* body {
+    background: linear-gradient(135deg,var(--primary),var(--secondary));
+} */
+/* #dia {
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+} */
+#success {
+    margin: 25px;
+}
+
+#pred {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    margin: 20px;
+    align-content: space-around;
+    text-align: center;
+    color: white;
+
+}
+
+#stroke_div,#dia,#heart_div,#st,#percent{
+    background-color: #202020;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 5px 10px #fcfbfb;
+}
+
+#yn {
+    color: crimson;
+}

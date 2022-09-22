@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"
+        integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/last.css')}}">
+</head>
+<!-- <style>
+    body {
+        background-image: url({{url_for('static', filename='img/last.webp')}});
+    }
+</style> -->
+<body>
+    <div id="success">
+        <h1>SUCCESSFULLY SUBMITTED</h1>
+    </div>
+    <div id="pred">
+        <div id="percent">
+            <h3> PREDICTED <span id="percentage">{{pred_bmi}}</span> </h3>
+            <h3 id="yn"><p id="num"> percentage <span >0</span> </p> </h3>
+        </div>
+        <div id="st">
+            <h5 id="status"></h5>
+        </div>
+        <div id="dia">
+            <h5 id="diabetes">CHANCE FOR DIABETES <span id="yn">{{pred_diabetes}}</span></h5> 
+            <h5 id="Diabetestype">YOU have chance for having type <span id="yn">{{diabetestype}}</span></h5>
+        </div>
+        <div id="heart_div">
+            <h5 id="heart">CHANCE FOR HEARTATTACK <span id="yn">{{pred_heart}}</span></h5>
+        </div>
+        <div id="stroke_div">
+            <h5 id="stroke">CHANCE FOR STROKE <span id='yn'>{{pred_stroke}}</span></h5>
+        </div>
+
+    </div>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>
+
