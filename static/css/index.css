@@ -81,3 +81,20 @@ body {
     background-size:cover ;
     z-index: 1;
 }
+@media only screen and (max-width:400px) {
+   
+    #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 45px;
+    border-radius: 45px;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    position: initial;
+    height: auto;
+    }
+}
