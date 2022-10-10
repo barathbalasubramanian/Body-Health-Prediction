@@ -81,7 +81,7 @@ body {
     background-size:cover ;
     z-index: 1;
 }
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:600px) {
    
     #container {
     display: flex;

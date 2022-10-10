@@ -29,7 +29,7 @@
 #yn {
     color: crimson;
 }
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:600px) {
     #pred {
         display: flex;
         flex-direction: column;
@@ -38,6 +38,5 @@
         align-content: space-around;
         text-align: center;
         color: white;
-    
     }
 }
