@@ -121,7 +121,7 @@ def collection() :
         print(height_in_inches,'height')
         weight_in_pounds = 2.205 * int(weight)
         print(weight_in_pounds,'weight')
-        db.collection('persons').add({'age':age,'weight':weight,'height':height,'glucose level':gl})
+#         db.collection('persons').add({'age':age,'weight':weight,'height':height,'glucose level':gl})
         error = 'SUCCESSFULLY REGISTERED'
         # BMI
         bmi_list.append([gender,int(age),round(height_in_inches),round(weight_in_pounds)])
